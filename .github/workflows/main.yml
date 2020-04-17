@@ -38,4 +38,4 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: librtlsdr_vs2019.zip
-          path: build/librtlsdr_vs2019.zip
+          path: librtlsdr_vs2019.zip

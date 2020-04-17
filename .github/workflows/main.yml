@@ -24,12 +24,6 @@ jobs:
         with:
           submodules: true
 
-
-
-      - name: Install dependencies (Windows)
-        if: startsWith(matrix.os, 'windows')
-        shell: cmd
-
       - name: Build (Windows)
         if: startsWith(matrix.os, 'windows')
         run: |

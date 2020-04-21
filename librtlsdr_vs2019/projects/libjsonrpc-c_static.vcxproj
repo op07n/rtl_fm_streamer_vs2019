@@ -57,7 +57,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\librtlsdr\src;..\..\librtlsdr\src\jsonrpc-c;..\..\librtlsdr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\librtlsdr\src\ev;..\..\librtlsdr\src;..\..\librtlsdr\src\jsonrpc-c;..\..\librtlsdr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_LIB;NDEBUG;rtlsdr_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <ErrorReporting>None</ErrorReporting>
@@ -67,7 +67,7 @@
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;$(SolutionDir)$(PlatformShortName)\librtlsdr.lib;$(SolutionDir)$(PlatformShortName)\libconvenience.lib;$(SolutionDir)$(PlatformShortName)\libgetopt.lib;$(SolutionDir)$(PlatformShortName)\libusb-1.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;$(SolutionDir)\..\librtlsdr\src\ev\build\Release\libev_static.lib;$(SolutionDir)$(PlatformShortName)\librtlsdr.lib;$(SolutionDir)$(PlatformShortName)\libconvenience.lib;$(SolutionDir)$(PlatformShortName)\libgetopt.lib;$(SolutionDir)$(PlatformShortName)\libusb-1.0.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <LinkErrorReporting>NoErrorReport</LinkErrorReporting>
       <SetChecksum>true</SetChecksum>
       <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
@@ -84,7 +84,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\librtlsdr\src;..\..\librtlsdr\src\jsonrpc-c;..\..\librtlsdr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\librtlsdr\src\ev;..\..\librtlsdr\src;..\..\librtlsdr\src\jsonrpc-c;..\..\librtlsdr\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_LIB;NDEBUG;rtlsdr_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <ErrorReporting>None</ErrorReporting>

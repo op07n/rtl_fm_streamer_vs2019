@@ -7,14 +7,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
 #include <errno.h>
 #include <string.h>
+
+#ifndef _WIN32
+#include <unistd.h>
+#include <arpa/inet.h>
+#include <sys/socket.h>
 #include <sys/types.h>
 #include <sys/socket.h>
-#include <netinet/in.h>
+#include <sys/time.h>
 #include <netdb.h>
-#include <arpa/inet.h>
+#include <netinet/in.h>
+#include <fcntl.h>
+#else
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include "getopt/getopt.h"
+#endif
 
 #include "jsonrpc-c.h"
 

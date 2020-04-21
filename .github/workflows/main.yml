@@ -24,6 +24,20 @@ jobs:
         with:
           submodules: true
 
+
+      - name: Build only libev (Windows)
+        if: startsWith(matrix.os, 'windows')
+        run: |
+            call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
+            cd librtlsdr/src/ev
+            mkdir build
+            cd build
+            cmake -G "Visual Studio 16 2019" -A Win32 -DCMAKE_BUILD_TYPE=Release ../"
+            msbuild ..\build\libev.sln  /p:Platform="Win32" /p:Configuration=Release
+            cd ../../..
+        shell: cmd
+
+
       - name: Build (Windows)
         if: startsWith(matrix.os, 'windows')
         run: |

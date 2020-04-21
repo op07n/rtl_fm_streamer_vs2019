@@ -99,6 +99,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libconvenience (static)", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libgetopt (static)", "projects\libgetopt_static.vcxproj", "{B260ECB2-867C-4ACB-9CE4-95911DAFC5D2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libjsonrpc-c (static)", "projects\libjsonrpc-c_static.vcxproj", "{BB637EE9-F3A4-45AE-A95F-1F0E929DCAA7}"
+EndProject
+
+
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Win32 = Release|Win32
@@ -165,6 +169,14 @@ Global
 		{B260ECB2-867C-4ACB-9CE4-95911DAFC5D2}.Release|Win32.Build.0 = Release|Win32
 		{B260ECB2-867C-4ACB-9CE4-95911DAFC5D2}.Release|x64.ActiveCfg = Release|x64
 		{B260ECB2-867C-4ACB-9CE4-95911DAFC5D2}.Release|x64.Build.0 = Release|x64
+		{BB637EE9-F3A4-45AE-A95F-1F0E929DCAA7}.Release|Win32.ActiveCfg = Release|Win32
+		{BB637EE9-F3A4-45AE-A95F-1F0E929DCAA7}.Release|Win32.Build.0 = Release|Win32
+		{BB637EE9-F3A4-45AE-A95F-1F0E929DCAA7}.Release|x64.ActiveCfg = Release|x64
+		{BB637EE9-F3A4-45AE-A95F-1F0E929DCAA7}.Release|x64.Build.0 = Release|x64		
+		
+		
+		
+		
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

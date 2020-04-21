@@ -28,14 +28,13 @@ jobs:
         if: startsWith(matrix.os, 'windows')
         run: |
             call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
-            msbuild.exe  librtlsdr_vs2019/build.sln /p:Configuration=Release /p:Platform="Win32"
-            echo %CONAN_LIB_DIRS%
-            7z a librtlsdr_vs2019.zip D:/a/librtlsdr_vs2019/
+            msbuild.exe  rtl_fm_streamer_vs2019/build.sln /p:Configuration=Release /p:Platform="Win32"
+            7z a rtl_fm_streamer_vs2019.zip D:/a/rtl_fm_streamer_vs2019/
         shell: cmd
 
       - name: Upload artifact (Windows)
         if: startsWith(matrix.os, 'windows')
         uses: actions/upload-artifact@v1
         with:
-          name: librtlsdr_vs2019.zip
-          path: librtlsdr_vs2019.zip
+          name: rtl_fm_streamer_vs2019.zip
+          path: rtl_fm_streamer_vs2019.zip

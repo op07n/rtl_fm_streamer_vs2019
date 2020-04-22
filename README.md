@@ -2,7 +2,11 @@ Duplicate of https://github.com/AlbrechtL/rtl_fm_streamer
 
 Using   https://github.com/jorgem-seq/librtlsdr-vs-project-files/tree/master/librtlsdr_vs2019
 
+Only Win32 build (without avx2)
 
+To build see main.yml file.
+
+--------------------------------------------------------------------------------------------
 
 RTL SDR FM Streamer
 ===================

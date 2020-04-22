@@ -19,10 +19,6 @@ jobs:
       fail-fast: false
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          submodules: true
-
       - name: Checkout repo CJSON
         uses: actions/checkout@v2
         with:
@@ -39,6 +35,10 @@ jobs:
             cmake -G "Visual Studio 16 2019" -A Win32 -DCMAKE_BUILD_TYPE=Release ../"   
             cd .. 
         shell: cmd
+
+      - uses: actions/checkout@v1
+        with:
+          submodules: true
 
       - name: Build libev (Win32)
         if: startsWith(matrix.os, 'windows')

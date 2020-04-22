@@ -24,8 +24,24 @@ jobs:
         with:
           submodules: true
 
+      - name: Checkout repo CJSON
+        uses: actions/checkout@v2
+        with:
+          repository: op07n/cJSON.git
+          path: cJSON 
 
-      - name: Build only libev (Windows)
+      - name: Build CJSON (Win32)
+        if: startsWith(matrix.os, 'windows')
+        run: |
+            call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
+            cd cJSON
+            mkdir build
+            cd build
+            cmake -G "Visual Studio 16 2019" -A Win32 -DCMAKE_BUILD_TYPE=Release ../"   
+            cd .. 
+        shell: cmd
+
+      - name: Build libev (Win32)
         if: startsWith(matrix.os, 'windows')
         run: |
             call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"

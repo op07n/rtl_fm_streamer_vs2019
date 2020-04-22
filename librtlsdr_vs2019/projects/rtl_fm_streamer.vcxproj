@@ -59,7 +59,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\librtlsdr\include;..\..\libusb\libusb;..\..\pthreads4w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\librtlsdr\src\ev;..\..\librtlsdr\include;..\..\libusb\libusb;..\..\pthreads4w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CONSOLE;NDEBUG;PTW32_STATIC_LIB;PTW32_BUILD_INLINED;__CLEANUP_C;rtlsdr_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <ErrorReporting>None</ErrorReporting>
@@ -84,7 +84,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\librtlsdr\include;..\..\libusb\libusb;..\..\pthreads4w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\librtlsdr\src\ev;..\..\librtlsdr\include;..\..\libusb\libusb;..\..\pthreads4w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CONSOLE;NDEBUG;PTW32_STATIC_LIB;PTW32_BUILD_INLINED;__CLEANUP_C;rtlsdr_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <ErrorReporting>None</ErrorReporting>

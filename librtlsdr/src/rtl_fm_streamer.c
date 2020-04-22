@@ -1087,7 +1087,7 @@ output_thread_fn(void *arg)
 
 		if (isStartStream)
 		{
-			SentNum = send(ConnectionDesc, buf, len, MSG_NOSIGNAL);
+			SentNum = send(ConnectionDesc, buf, len, 0); // MSG_NOSIGNAL breaks the Windows build
 			if (SentNum < 0)
 			{
 				fprintf(stderr, "Error sending stream: \"%s\". Close the connection!\n", strerror(errno));
@@ -1447,7 +1447,7 @@ connection_thread_fn(void *arg)
 		if (!strncmp(TCPRead, "HEAD", 4))
 		{
 			fprintf(stderr, "Send OK\n");
-			send(ConnectionDesc, HTTP_OK, sizeof(HTTP_OK), MSG_NOSIGNAL);
+			send(ConnectionDesc, HTTP_OK, sizeof(HTTP_OK), 0); // MSG_NOSIGNAL breaks the Windows build
 		}
 
 		if (!strncmp(TCPRead, "GET", 3))
@@ -1461,8 +1461,7 @@ connection_thread_fn(void *arg)
 			verbose_set_frequency(dongle.dev, dongle.freq);
 
 			// Start streaming
-			send(ConnectionDesc, StreamStart, sizeof(StreamStart),
-			MSG_NOSIGNAL);
+			send(ConnectionDesc, StreamStart, sizeof(StreamStart), 0); // MSG_NOSIGNAL breaks the Windows build
 
 			if (isStereo)
 			{

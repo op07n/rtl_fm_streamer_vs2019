@@ -60,6 +60,8 @@
 #include <netinet/in.h>
 #else
 #include <windows.h>
+#include <winsock2.h>
+#include <ws2tcpip.h>
 #include <fcntl.h>
 #include <io.h>
 #include "getopt/getopt.h"

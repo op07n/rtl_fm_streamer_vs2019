@@ -18,8 +18,14 @@ jobs:
         os: [windows-latest]
       fail-fast: false
 
+
     steps:
-      - name: Checkout repo CJSON
+      - name: Checkout main repo
+        uses: actions/checkout@v1
+        with:
+          submodules: true
+
+      - name: Checkout cJSON repo
         uses: actions/checkout@v2
         with:
           repository: op07n/cJSON.git
@@ -34,10 +40,8 @@ jobs:
             cd build
             cmake .. -G "Visual Studio 16 2019" -A Win32 -DCMAKE_BUILD_TYPE=Release" 
             msbuild cJSON.sln  /p:Platform="Win32" /p:Configuration=Release
-
-      - uses: actions/checkout@v1
-        with:
-          submodules: true
+            cd ..	
+        shell: cmd
 
       - name: Build libev (Win32)
         if: startsWith(matrix.os, 'windows')

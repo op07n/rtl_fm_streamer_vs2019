@@ -67,11 +67,13 @@
 #include "getopt/getopt.h"
 #define msleep(x) Sleep(x)
 #define usleep(x) Sleep(x/1000)
+#define bzero(a, b) memset(a, 0x0, b)
 #if defined(_MSC_VER) && (_MSC_VER < 1800)
 #define round(x) (x > 0.0 ? floor(x + 0.5): ceil(x - 0.5))
 #endif
 #define _USE_MATH_DEFINES
 #endif
+
 
 #include <math.h>
 #include <pthread.h>

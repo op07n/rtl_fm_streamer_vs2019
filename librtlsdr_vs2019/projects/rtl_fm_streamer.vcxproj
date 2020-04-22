@@ -59,7 +59,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <AdditionalIncludeDirectories>..\..\cJSON;..\..\librtlsdr\src\ev;..\..\librtlsdr\include;..\..\libusb\libusb;..\..\pthreads4w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>"d:\a\rtl_fm_streamer_vs2019\rtl_fm_streamer_vs2019\cJSON";..\..\librtlsdr\src\ev;..\..\librtlsdr\include;..\..\libusb\libusb;..\..\pthreads4w;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CONSOLE;NDEBUG;PTW32_STATIC_LIB;PTW32_BUILD_INLINED;__CLEANUP_C;rtlsdr_STATIC;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <ErrorReporting>None</ErrorReporting>

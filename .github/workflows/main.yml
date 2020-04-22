@@ -20,9 +20,10 @@ jobs:
 
     steps:
       - name: Checkout repo CJSON
-        uses: actions/checkout@v2
+        uses: actions/checkout@v1
         with:
           repository: op07n/cJSON.git
+          submodules: true
           path: cJSON 
 
       - name: Build CJSON (Win32)

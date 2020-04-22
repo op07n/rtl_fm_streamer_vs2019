@@ -65,7 +65,7 @@
 #include "getopt/getopt.h"
 #define msleep(x) Sleep(x)
 #define usleep(x) Sleep(x/1000)
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && (_MSC_VER < 1800)
 #define round(x) (x > 0.0 ? floor(x + 0.5): ceil(x - 0.5))
 #endif
 #define _USE_MATH_DEFINES
@@ -358,7 +358,7 @@ static float u8_f32_table[2][256] =
 static float lp_filter_f32[16] =
 { 0 };
 
-#ifdef _MSC_VER
+#if defined(_MSC_VER) && (_MSC_VER < 1800)
 double log2(double n)
 {
 	return log(n) / log(2.0);

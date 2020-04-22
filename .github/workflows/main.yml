@@ -29,7 +29,8 @@ jobs:
         if: startsWith(matrix.os, 'windows')
         run: |
             call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
-            cd -D "d:\a\rtl_fm_streamer_vs2019\rtl_fm_streamer_vs2019\cJSON\"
+            cd -D "d:\a\rtl_fm_streamer_vs2019\rtl_fm_streamer_vs2019\"
+            cd -D cJSON
             dir
             mkdir build
             cd build

@@ -20,17 +20,16 @@ jobs:
 
     steps:
       - name: Checkout repo CJSON
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
         with:
           repository: op07n/cJSON.git
-          path: cJSON 
+          path: "cJSON"
 
       - name: Build CJSON (Win32)
         if: startsWith(matrix.os, 'windows')
         run: |
             call "%programfiles(x86)%\Microsoft Visual Studio\2019\Enterprise\VC\Auxiliary\Build\vcvars32.bat"
-            cd -D "d:\a\rtl_fm_streamer_vs2019\rtl_fm_streamer_vs2019\"
-            cd -D cJSON
+            cd "cJSON"
             dir
             mkdir build
             cd build

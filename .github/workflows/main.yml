@@ -23,7 +23,6 @@ jobs:
         uses: actions/checkout@v1
         with:
           repository: op07n/cJSON.git
-          submodules: true
           path: cJSON 
 
       - name: Build CJSON (Win32)

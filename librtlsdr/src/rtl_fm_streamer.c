@@ -47,6 +47,8 @@
  *       fix oversampling
  */
 
+#pragma comment(lib, "cJSON.lib")
+
 #include <errno.h>
 #include <signal.h>
 #include <string.h>
@@ -82,7 +84,6 @@
 #include "rtl-sdr.h"
 #include "convenience/convenience.h"
 #include "jsonrpc-c/jsonrpc-c.h"
-#include <cJSON.h>
 
 #define VERSION "0.0.6"
 

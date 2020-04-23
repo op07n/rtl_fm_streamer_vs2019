@@ -47,7 +47,7 @@
  *       fix oversampling
  */
 
-#pragma comment(lib, "cJSON.lib")
+#pragma comment(lib, "libcjson.lib")
 
 #include <errno.h>
 #include <signal.h>

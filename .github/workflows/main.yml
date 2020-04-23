@@ -38,7 +38,7 @@ jobs:
             cd "cJSON"
             mkdir build
             cd build
-            cmake .. -G "Visual Studio 16 2019" -A Win32 -DCMAKE_BUILD_TYPE=Release -DENABLE_CJSON_UTILS=On -DENABLE_HIDDEN_SYMBOLS=On -DENABLE_PUBLIC_SYMBOLS=On -DENABLE_TARGET_EXPORT=On" 
+            cmake .. -G "Visual Studio 16 2019" -A Win32 -DCMAKE_BUILD_TYPE=Release -DBUILD_SHARED_AND_STATIC_LIBS=On -DENABLE_CJSON_UTILS=On -DENABLE_HIDDEN_SYMBOLS=On -DENABLE_PUBLIC_SYMBOLS=On -DENABLE_TARGET_EXPORT=On" 
             msbuild cJSON.sln  /p:Platform="Win32" /p:Configuration=Release
             cd ..	
         shell: cmd

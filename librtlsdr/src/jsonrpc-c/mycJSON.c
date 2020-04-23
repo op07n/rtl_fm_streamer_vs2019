@@ -23,7 +23,7 @@
 /* cJSON */
 /* JSON parser in C. */
 
-#pragma comment(lib, “cJSON.lib”)
+#pragma comment(lib, “libcjson.lib”)
 
 #include <string.h>
 #include <stdio.h>
